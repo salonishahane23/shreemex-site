@@ -74,22 +74,40 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Updated member image container styling */
 .member-image-container {
     position: relative;
     height: 16rem;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f2e5;
 }
 
 .member-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform: scale(1);
+    object-fit: contain; /* Changed from 'cover' to 'contain' */
+    transform: scale(0.9); /* Start slightly smaller */
     transition: transform 0.3s;
 }
 
 .team-card:hover .member-image {
-    transform: scale(1.1);
+    transform: scale(1); /* Scale to normal size on hover instead of enlarging */
+}
+
+/* Optional: if you want to create a framed effect */
+.member-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 8px solid transparent;
+    border-bottom-color: rgb(250, 229, 178);
+    pointer-events: none;
 }
 
 .member-info {
