@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreemex Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css"> <!-- Navigation styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar Placeholder -->
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+
+    <div class="min-h-screen bg-main overflow-x-hidden">
+        <div class="hero-section">
+            <div class="hero-bg">
+                <img src="https://ucarecdn.com/972d58a6-ab00-4822-b7ca-5e93b94311c5/-/format/auto/" alt="Sepia-toned port illustration" class="hero-img">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="logo-container">
+                    <div class="logo-ring ring-1"></div>
+                    <div class="logo-ring ring-2"></div>
+                    <div class="logo-ring ring-3"></div>
+
+                    <div class="logo-circle">
+                        <div class="logo-inner">
+                            <img src="https://ucarecdn.com/1432d4cb-d21e-4e68-a8c8-809138257440/-/format/auto/" alt="Shreemex Hub logo" class="hero-logo">
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="hero-tagline">Products are immaterial, problems are real</h2>
+            </div>
+        </div>
+
+        <div class="mission-section">
+            <div class="decoration decoration-tl"></div>
+            <div class="decoration decoration-br"></div>
+
+            <div class="mission-container">
+                <div class="mission-card">
+                    <div class="corner corner-tl"></div>
+                    <div class="corner corner-br"></div>
+
+                    <div class="mission-content">
+                        <h3 class="mission-title">Mission & Vision</h3>
+                        <div class="mission-divider"></div>
+                        <p class="mission-text">
+                            We break barriers in international trade by providing expert guidance, strategic connections, and end-to-end trade solutions, redefining global commerce to create seamless, borderless business opportunities for all.
+                        </p>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h4 class="feature-title">Expert Guidance</h4>
+                                <p class="feature-text">
+                                    Professional support through every step of your international trade journey
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h4 class="feature-title">Strategic Connections</h4>
+                                <p class="feature-text">
+                                    Building valuable partnerships across global markets
+                                </p>
+                            </div>
+
+                            <div class="feature-card">
+                                <h4 class="feature-title">End-to-End Solutions</h4>
+                                <p class="feature-text">
+                                    Comprehensive trade solutions from concept to completion
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

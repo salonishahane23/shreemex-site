@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShreemEx Hub - About Us</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+    <div class="min-h-screen bg-main">
+        <div class="page-content">
+            <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8 py-16">
+                <div class="flex flex-col md-flex-row items-center gap-12">
+                    <div class="w-full md-w-half">
+                        <img src="https://ucarecdn.com/1a88a396-b371-4827-b28d-475acd943bb6/-/format/auto/"
+                            alt="Export house illustration showing global trade and logistics"
+                            class="w-full h-400 object-cover rounded-lg shadow-lg transform transition-transform hover-scale">
+                    </div>
+
+                    <div class="w-full md-w-half space-y-6">
+                        <h1 class="text-4xl md-text-5xl font-bold gradient-text">
+                            About Us
+                        </h1>
+
+                        <div class="space-y-4 text-gray">
+                            <p class="text-lg leading-relaxed">
+                                At ShreemEx Hub, we are passionate about helping businesses
+                                expand globally. With our team of seasoned professionals, we
+                                provide comprehensive import/export services and expert
+                                guidance on international trade practices.
+                            </p>
+
+                            <div class="space-y-4">
+                                <h2 class="text-2xl font-semibold text-accent">
+                                    Our Mission
+                                </h2>
+                                <p class="leading-relaxed">
+                                    To be a trusted partner in international trade, helping
+                                    businesses navigate global markets with confidence while
+                                    providing tailored solutions for their unique needs.
+                                </p>
+
+                                <h2 class="text-2xl font-semibold text-accent">
+                                    Our Values
+                                </h2>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        <span>Client-Centric Approach</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        <span>Professional Excellence</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        <span>Global Expertise</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        <span>Trust & Transparency</span>
+                                    </li>
+                                    <li class="flex items-center gap-2">
+                                        <i class="fas fa-check-circle text-accent"></i>
+                                        <span>Collaborative Partnership</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="about.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

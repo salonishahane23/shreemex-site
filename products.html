@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreemex - Products</title>
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+    <div class="min-h-screen bg-main">
+        <div class="content-container">
+            <div class="hero-section">
+                <div class="hero-title">
+                    <i class="fas fa-lotus hero-icon"></i>
+                    Products
+                </div>
+
+                <p class="hero-description">
+                    Discover our diverse range of quality products. From fresh produce
+                    to pharmaceuticals, we ensure the highest standards across all
+                    categories.
+                </p>
+            </div>
+
+            <div class="products-section">
+                <h2 class="section-title">Our Products</h2>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://ucarecdn.com/9c99578e-b681-4fa1-9fd5-185f2bb0e513/-/format/auto/" alt="Modern agricultural produce">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Agriculture produce</h3>
+                            <p class="product-description">
+                                We supply essential agricultural staples—food grains, millets, and more—while ensuring quality, sustainability, and reliable access. By addressing supply chain challenges and supporting responsible farming, we do more than trade—we help nourish communities and promote global food security.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reverse">
+                        <div class="product-image">
+                            <img src="static/processed foods.jpg" alt="Various natural and edible oils in bottles">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Processed foods
+                            </h3>
+                            <p class="product-description">
+                                We provide a diverse selection of processed foods, from canned and dehydrated to frozen products, ensuring long-lasting freshness and nutrition. Sourced from trusted suppliers, our offerings meet rigorous quality standards for reliability and convenience. More than just distribution, we support global food security by making quality, ready-to-use nutrition accessible everywhere.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Replace the problematic section in your HTML with this corrected version -->
+
+    
+    
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://ucarecdn.com/474c6eb3-a120-4f41-8253-28ab308cabaf/-/format/auto/" alt="Agricultural products">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Agricultural products</h3>
+            <p class="product-description">
+                We supply a wide range of agricultural inputs, including chemical fertilizers, high-quality seeds, crop protection solutions, coco peat, and organic manure, ensuring better yields and sustainable farming. With a focus on quality and innovation, we provide farmers with essential resources to improve soil health and productivity. More than just supplying products, we contribute to a stronger, more resilient agricultural ecosystem.
+            </p>
+        </div>
+    </div>
+    
+    <div class="product-card reverse">
+        <div class="product-image">
+            <img src="https://ucarecdn.com/326db43f-6ef5-4f8c-ae88-96d470d8d1ee/-/format/auto/" alt="Various edible oils">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Edible & essential oils</h3>
+            <p class="product-description">
+                We provide a diverse range of edible and essential oils, including coconut, sunflower, olive, and aromatic oils, ensuring purity, quality, and sustainability. Sourced from trusted producers, our oils cater to culinary, medicinal, and wellness needs. More than just supplying oils, we promote healthier lifestyles and support industries that rely on natural, high-quality extracts.
+            </p>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://ucarecdn.com/c84814b9-f5fc-44f2-b344-4a7f5bfd1578/-/format/auto/" alt="Health and wellness products">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Health and wellness</h3>
+            <p class="product-description">
+              Solutions matter more than products. We bring nature's most effective herbal remedies—whether in the form of oral supplements, therapeutic lotions, or wellness blends—to global markets, ensuring purity and potency. By bridging supply gaps and promoting sustainable sourcing, we go beyond distribution—we empower healthier lives and make natural healing accessible to all.
+            </p>
+        </div>
+    </div>
+    
+    <div class="product-card reverse">
+        <div class="product-image">
+            <img src="https://ucarecdn.com/2ae8bee9-9dae-4934-b766-34bb032f2435/-/format/auto/" alt="Fresh fruits and vegetables">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Fruits and vegetables</h3>
+            <p class="product-description">
+                Products are secondary—solving real challenges is what matters. We create solutions by connecting farms to global markets, delivering the freshest, most flavorful produce while tackling supply chain gaps and supporting local growers. Every shipment isn't just food; it's quality, nourishment, and a step toward a healthier, more connected world.
+            </p>
+        </div>
+    </div>
+    
+    <div class="product-card">
+        <div class="product-image">
+            <img src="static/eng products.png" alt="Engineering products">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Engineering products</h3>
+            <p class="product-description">
+                We supply a wide range of engineering products—from nails and hammers to power tools and industrial equipment—ensuring durability and performance. With efficient sourcing and logistics, we maintain the highest quality standards. More than just supplying tools, we empower industries, enhance craftsmanship, and drive efficiency in a competitive market.
+            </p>
+        </div>
+    </div>
+    
+    <div class="product-card reverse">
+        <div class="product-image">
+            <img src="https://ucarecdn.com/bc3f611b-0d87-4aae-982e-4c6fa47e0d93/-/format/auto/" alt="Pharmaceutical and medical supplies">
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">Pharma and medical consumable</h3>
+            <p class="product-description">
+                We provide a comprehensive range of pharmaceutical and medical consumables, including gloves, needles, IV tubes, syringes, and more, ensuring safety, reliability, and compliance with global standards. With a strong focus on quality and efficient sourcing, we support healthcare facilities, pharmacies, and medical professionals in delivering safe and effective patient care. More than just supplying essentials, we contribute to a healthier, more resilient world.
+            </p>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="pro.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

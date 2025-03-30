@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Shreemex</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="nav.css"> <!-- Navigation styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+    <div class="min-h-screen bg-f5f0e8">
+        <div class="pt-24 min-h-screen bg-f5f0e8 px-4 sm-px-6 lg-px-8 relative">
+            <div class="pattern-bg"></div>
+            <div class="max-w-7xl mx-auto relative">
+                <div class="text-center mb-12 animate-fadeIn">
+                    <h1 class="text-5xl md-text-7xl font-bold mb-4 animate-slideUp">
+                        Here to <span class="text-gradient animate-gradient">help</span>
+                    </h1>
+                    <p class="text-lg md-text-xl text-gray-600 animate-fadeIn delay-300">
+                        Get in touch with our team for any inquiries or support
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg-flex-row gap-8">
+                    <div class="w-full lg-w-1-2">
+                        <form id="contactForm" class="bg-white p-8 rounded-xl shadow-lg hover-shadow-xl transition-shadow duration-300">
+                            <div class="space-y-6">
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-user text-gray-400"></i>
+                                    </div>
+                                    <input type="text" name="fullName" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus-outline-none focus-ring-2 focus-ring-ff6b6b focus-border-transparent transition-all duration-300" placeholder="Full Name">
+                                    <label class="absolute -top-2 left-2 px-1 bg-white text-sm text-gray-600">
+                                        Full Name *
+                                    </label>
+                                </div>
+
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-envelope text-gray-400"></i>
+                                    </div>
+                                    <input type="email" name="email" required class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus-outline-none focus-ring-2 focus-ring-ff6b6b focus-border-transparent transition-all duration-300" placeholder="Email Address">
+                                    <label class="absolute -top-2 left-2 px-1 bg-white text-sm text-gray-600">
+                                        Email Address *
+                                    </label>
+                                </div>
+
+                                
+
+                                <div class="relative">
+                                    <div class="absolute top-3 left-3 pointer-events-none">
+                                        <i class="fas fa-comment text-gray-400"></i>
+                                    </div>
+                                    <textarea name="message" required rows="4" maxlength="500" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus-outline-none focus-ring-2 focus-ring-ff6b6b focus-border-transparent transition-all duration-300" placeholder="Your Message"></textarea>
+                                    <label class="absolute -top-2 left-2 px-1 bg-white text-sm text-gray-600">
+                                        products *
+                                    </label>
+                                    <div class="text-right text-sm text-gray-500 mt-1" id="messageCount">
+                                        
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="submitButton" class="w-full py-3 px-6 text-white font-semibold rounded-xl bg-gradient-to-r from-ff6b6b to-ff8e8e hover-opacity-90 transition-all duration-300 transform hover-scale-102">
+                                    Send Message
+                                </button>
+
+                                <div class="text-green-500 text-center animate-fadeIn hidden" id="successMessage">
+                                    Message sent successfully!
+                                </div>
+                                <div class="text-red-500 text-center animate-fadeIn hidden" id="errorMessage">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="w-full lg-w-1-2">
+                        <div class="bg-white p-8 rounded-xl shadow-lg hover-shadow-xl transition-shadow duration-300 h-full relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-ff6b6b to-ff8e8e"></div>
+                            <div class="space-y-8">
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                                        <i class="fas fa-map-marker-alt text-ff6b6b text-3xl"></i>
+                                        Visit us at
+                                    </h3>
+                                    <div class="group relative cursor-pointer copy-text">
+                                        <p class="text-gray-600 hover-text-ff6b6b transition-colors duration-300">
+                                            Off No: 12, Trios Workspace, Symphony IT Park, Nanded City, Pune (India)
+                                            <i class="fas fa-copy ml-2 opacity-0 group-hover-opacity-100 transition-opacity duration-300"></i>
+                                        </p>
+                                    </div>
+                                    <div class="mt-4 h-48 rounded-lg overflow-hidden">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15138.06224751657!2d73.77971968881444!3d18.460291861478225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2955b6133b1db%3A0x1fddc39bbffccfa!2sSymphony%20IT%20Park%20Official!5e0!3m2!1sen!2sin!4v1743312848056!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                                        <i class="fas fa-phone text-ff6b6b text-3xl"></i>
+                                        Phone
+                                    </h3>
+                                    <div class="space-y-3">
+                                        <div class="group relative cursor-pointer flex items-center copy-text">
+                                            <p class="text-gray-600 hover-text-ff6b6b transition-colors duration-300">
+                                                +919822003289
+                                                <i class="fas fa-copy ml-2 opacity-0 group-hover-opacity-100 transition-opacity duration-300"></i>
+                                            </p>
+                                        </div>
+                                        <div class="group relative cursor-pointer flex items-center copy-text">
+                                            <p class="text-gray-600 hover-text-ff6b6b transition-colors duration-300">
+                                                +919881908201
+                                                <i class="fas fa-copy ml-2 opacity-0 group-hover-opacity-100 transition-opacity duration-300"></i>
+                                            </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                                        <i class="fas fa-envelope text-ff6b6b text-3xl"></i>
+                                        Email
+                                    </h3>
+                                    <div class="space-y-3">
+                                        <div class="group relative cursor-pointer flex items-center copy-text">
+                                            <a href="mailto:Shreem@shreemex.in" class="text-gray-600 hover-text-ff6b6b transition-colors duration-300">
+                                                Shreem@shreemex.in
+                                                <i class="fas fa-copy ml-2 opacity-0 group-hover-opacity-100 transition-opacity duration-300"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-6 border-t border-gray-200">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-xl font-semibold">Connect With Us</h3>
+                                        <div class="flex gap-4">
+                                            <a href="https://www.instagram.com/shreemexhubllp/" target="_blank" class="text-2xl text-gray-600 hover:text-ff6b6b transition-colors duration-300">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                            <a href="https://x.com/shreemex" target="_blank" class="text-2xl text-gray-600 hover:text-ff6b6b transition-colors duration-300">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/company/shreemex/about/?viewAsMember=true" target="_blank" class="text-2xl text-gray-600 hover:text-ff6b6b transition-colors duration-300">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                    <p class="text-gray-600 italic">
+                                        We look forward to hearing from you and helping your business reach new heights in the global market.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="contact.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

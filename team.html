@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreemex - Team</title>
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+    <div class="container">
+        <main class="main-content">
+            <h1 class="page-title">Meet Our Team</h1>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="member-image-container">
+                        <img src="static/deepak.png" alt="Deepak's professional headshot" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Deepak</h3>
+                        <p class="member-position">Deepak has a rich history in engineering, commerce, and management consulting. He brings extensive experience in market research, financial management, production management, and service sector procedures. Deepak's diverse background equips him to provide strategic insights and effective solutions for our clients. His analytical skills and strategic thinking make him a valuable asset to any project.</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="member-image-container">
+                        <img src="static/malatesh.png" alt="Malatesh's professional headshot" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Malatesh</h3>
+                        <p class="member-position">Malatesh is proficient in financial analysis, process optimization, team building, leadership, client reporting, and people management. He has a strong focus on effective escalation matrix strategies for smooth operations and client satisfaction. Malatesh's leadership ensures that our team delivers exceptional service and results. His ability to build and lead high-performing teams contributes to our success in achieving client objectives.</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="member-image-container">
+                        <img src="https://ucarecdn.com/38a7b5a8-994e-4227-a913-2b10d514601b/-/format/auto/" alt="Rakhee's professional headshot" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Rakhee</h3>
+                        <p class="member-position">Rakhee is skilled in inventory management, staff training, and quality assurance. She is proficient in document compliances and operational management, with extensive experience in customer services, process and regulatory audits, and channel support and vendor management. Rakhee's expertise ensures that our operations run smoothly and efficiently. Her attention to detail and commitment to excellence drive our continuous improvement efforts.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="team.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

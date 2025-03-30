@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreemex - Products</title>
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav id="main-nav" class="fixed w-full z-50 transition-all">
+    <div id="nav-bg" class="backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
+                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                    </div>
+                </div>
+
+                <div class="hidden md-flex items-center space-x-8">
+                    <button class="nav-link" data-item="Home">
+                        Home
+                        <span class="nav-link-underline"></span>
+                    </button>
+
+                    <div class="relative group">
+                        <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
+                            Core Business
+                            <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                        </button>
+
+                        <div class="core-business-dropdown">
+                            <button class="dropdown-item" data-item="Products">Products</button>
+                            <button class="dropdown-item" data-item="Services">Services</button>
+                        </div>
+                    </div>
+
+                    <button class="nav-link" data-item="About Us">
+                        About Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Team">
+                        Team
+                        <span class="nav-link-underline"></span>
+                    </button>
+                    <button class="nav-link" data-item="Contact Us">
+                        Contact Us
+                        <span class="nav-link-underline"></span>
+                    </button>
+                </div>
+
+                <button class="menu-toggle md-hidden" id="menu-toggle">
+                    <span class="menu-line top-line"></span>
+                    <span class="menu-line middle-line"></span>
+                    <span class="menu-line bottom-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu md-hidden">
+        <div class="px-4 py-3 space-y-3">
+            <button class="mobile-nav-item" data-item="Home">
+                <i class="fas fa-home w-6"></i>
+                Home
+            </button>
+
+            <div class="space-y-2">
+                <button class="mobile-dropdown-toggle">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-6"></i>
+                        Core Business
+                    </div>
+                    <i class="fas fa-chevron-down text-10 transition-transform"></i>
+                </button>
+
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-item" data-item="Products">
+                        <i class="fas fa-box w-6"></i>
+                        Products
+                    </button>
+                    <button class="mobile-nav-item" data-item="Services">
+                        <i class="fas fa-cogs w-6"></i>
+                        Services
+                    </button>
+                </div>
+            </div>
+
+            <button class="mobile-nav-item" data-item="About Us">
+                <i class="fas fa-info-circle w-6"></i>
+                About Us
+            </button>
+            <button class="mobile-nav-item" data-item="Team">
+                <i class="fas fa-users w-6"></i>
+                Team
+            </button>
+            <button class="mobile-nav-item" data-item="Contact Us">
+                <i class="fas fa-envelope w-6"></i>
+                Contact Us
+            </button>
+        </div>
+    </div>
+</nav>
+    <div class="min-h-screen bg-main">
+        <div class="content-container">
+            <div class="hero-section">
+                <div class="hero-title">
+                    <i class="fas fa-lotus hero-icon"></i>
+                    Services
+                </div>
+
+                <p class="hero-description">
+                    At ShreemEx Hub, we offer a range of value-added services to help your business thrive in the global market
+                </p>
+            </div>
+
+            <div class="products-section">
+                <h2 class="section-title">Our Valuable Services</h2>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="static/consul.png" alt="Modern pharmaceutical supplies and medical equipment">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">EXIM & Business Consultancy
+                            </h3>
+                            <p class="product-description">
+                                Our consultancy services provide expert guidance on import and export operations while also offering comprehensive business consultancy solutions. We help businesses navigate international trade regulations and practices, ensuring smooth and compliant operations. Our strategic advice is tailored to enhance business growth, improve operational efficiency, and expand your global reach
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reverse">
+                        <div class="product-image">
+                            <img src="static/bpm.png" alt="Various natural and edible oils in bottles">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Business Process Management (BPM)</h3>
+                            <p class="product-description">
+                                we provide comprehensive backend operations support across industries. From inbound and outbound call management to non-technical services, we enhance efficiency and customer satisfaction. Our outbound solutions, including lead generation, appointment scheduling, and follow-ups, drive business growth.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="static/trade.png" alt="Fresh fruits and produce display">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Trade Compliances & Executions Services</h3>
+                            <p class="product-description">
+                                Navigating international trade regulations can be complex. Our trade compliance services ensure that your business adheres to all relevant laws and regulations, minimizing the risk of penalties and delays. We handle the execution of trade operations, ensuring smooth and efficient transactions. Our compliance team stays up-to-date with the latest regulatory changes, providing you with peace of mind.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reverse">
+                        <div class="product-image">
+                            <img src="static\Exim financial (2).png" alt="Various grains and pulses">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Financial & Insurance Services</h3>
+                            <p class="product-description">
+                                Our financial and insurance services provide the support you need to manage the financial aspects of international trade. We offer solutions such as trade finance, insurance coverage, and risk management, ensuring your business is protected. Our financial experts work with you to develop customized financial strategies that support your business objectives.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="static/digi.png" alt="Essential oils and herbal products">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Digital Marketing Solutions</h3>
+                            <p class="product-description">
+                                In the digital age, having a strong online presence is essential. Our digital marketing solutions include SEO, social media marketing, content creation, and more, helping you reach a wider audience and grow your business online. We create integrated digital marketing strategies that align with your business goals, driving traffic, engagement, and conversions.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="pro.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>
