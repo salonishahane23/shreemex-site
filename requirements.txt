@@ -21,6 +21,8 @@ Flask==3.1.0
 flask-cors==5.0.1
 Flask-DotEnv==0.1.2
 Flask-MySQLdb==2.0.0
+gunicorn
+
 h11==0.14.0
 html5lib==1.1
 idna==3.10
