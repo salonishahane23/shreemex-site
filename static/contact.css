@@ -7,7 +7,7 @@
 }
   
 body {
-    background-image: url('static/crape.jpg');
+    background-image: url('crape.jpg');
     background-repeat: repeat;
     background-size: cover;
 }

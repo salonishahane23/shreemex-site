@@ -1,4 +1,4 @@
-/* Utilities */
+/* Base Utilities */
 .min-h-screen {
     min-height: 100vh;
 }
@@ -44,16 +44,6 @@
     padding-right: 1rem;
 }
 
-.sm-px-6 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
-.lg-px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 .py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -73,14 +63,6 @@
 
 .items-center {
     align-items: center;
-}
-
-.h-16 {
-    height: 4rem;
-}
-
-.h-12 {
-    height: 7rem;
 }
 
 .cursor-pointer {
@@ -146,6 +128,7 @@
 
 .text-4xl {
     font-size: 2.25rem;
+    line-height: 1.2;
 }
 
 .text-lg {
@@ -172,20 +155,80 @@
     transform: rotate(180deg);
 }
 
+/* Responsive Height Controls */
+.h-12 {
+    height: 6rem; /* Enlarged from 3rem to 3.5rem */
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+@media (max-width: 640px) {
+    .h-12 {
+        height: 3rem; /* Enlarged from 2.5rem to 3rem */
+    }
+    
+    .h-16 {
+        height: 3.5rem;
+    }
+    
+    .text-4xl {
+        font-size: 1.75rem;
+    }
+    
+    .text-lg {
+        font-size: 1rem;
+    }
+    
+    .space-x-8 > * + * {
+        margin-left: 1rem;
+    }
+}
+
+/* Responsive Padding Controls */
+@media (min-width: 640px) {
+    .sm-px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg-px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Remove all default link underlines in navigation */
+#main-nav a,
+#main-nav button,
+.mobile-menu a,
+.mobile-menu button,
+.core-business-dropdown a {
+    text-decoration: none;
+}
+
 /* Navigation Specific Styles */
 #main-nav {
     transition: all 0.3s ease;
-    /* Remove or reduce any top margin/padding */
-    top: 0; /* Ensure it's at the very top */
+    top: 0;
 }
 
 #main-nav.scrolled {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #472e23;
 }
-/* Adjust the height and padding values */
-#main-nav .h-16 {
-    height: 5rem; /* Reduced from 4rem */
+
+#main-nav .nav-height {
+    height: 5rem;
+}
+
+@media (max-width: 640px) {
+    #main-nav .nav-height {
+        height: 4rem;
+    }
 }
 
 #main-nav.scrolled #nav-bg {
@@ -204,6 +247,12 @@
     padding: 0;
 }
 
+@media (max-width: 640px) {
+    .nav-link {
+        font-size: 0.875rem;
+    }
+}
+
 .nav-link:hover, .nav-link.active {
     color: #b07e2d;
 }
@@ -213,7 +262,7 @@
     bottom: -4px;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 2px; /* Changed from 2px to 0 to remove custom underlines */
     background: linear-gradient(to right, #3f2b0b, #b07e2d);
     transform: scaleX(0);
     transform-origin: left;
@@ -225,6 +274,7 @@
     transform: scaleX(1);
 }
 
+/* Core Business Dropdown - With Centered Text */
 .core-business-dropdown {
     position: absolute;
     top: 100%;
@@ -232,8 +282,8 @@
     width: 12rem;
     padding: 0.5rem 0;
     margin-top: 0.5rem;
-    background-color: #472e23;
-    border: 1px solid #e6d6cc;
+    background-color: #e6d6cc; /* Beige background color */
+    border: 1px solid #d5c3b8;
     border-radius: 0.25rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -244,29 +294,54 @@
     visibility: hidden;
 }
 
+/* Ensure dropdown is fully visible on hover */
 .core-business-btn:hover + .core-business-dropdown,
 .core-business-dropdown:hover {
     opacity: 1;
     transform: scaleY(1);
     visibility: visible;
+    display: block; /* Ensure it's displayed */
 }
 
+/* Center the dropdown items */
 .dropdown-item {
     width: 100%;
-    text-align: left;
+    text-align: center; /* Changed from left to center */
     padding: 0.5rem 1rem;
-    color: #ffffff;
+    color: #3f2b0b;
     background: none;
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: block; /* Ensure block display for full width */
 }
 
+/* Improve hover state for dropdown items */
 .dropdown-item:hover {
-    background-color: rgba(236, 217, 208, 0.7);
+    background-color: #3f2b0b; /* Slightly darker beige for hover */
     color: #ffffff;
+    width: 100%; /* Ensure full width on hover */
 }
 
+/* Make sure the dropdown remains visible when hovering between items */
+.core-business-dropdown:hover,
+.core-business-btn:hover ~ .core-business-dropdown,
+.core-business-dropdown:focus-within {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+/* Ensure dropdown covers full area without gaps */
+.core-business-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Create overlap with nav item */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent; /* Invisible connection to prevent hover gaps */
+}
 /* Mobile Menu */
 .menu-toggle {
     position: relative;
@@ -276,6 +351,17 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .desktop-menu {
+        display: none;
+    }
 }
 
 .menu-line {
@@ -323,6 +409,11 @@
     opacity: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 40;
 }
 
 .mobile-menu.open {
@@ -385,27 +476,7 @@
     display: block;
 }
 
-/* Page Content */
-.page-content {
-    padding-top: 4rem;
-    min-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.page-content.visible {
-    opacity: 1;
-}
-
-.gradient-text {
-    background: linear-gradient(to right, #3f2b0b, #b07e2d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-
-/* Media Queries */
+/* Responsive Utility Classes */
 @media (min-width: 768px) {
     .md-flex {
         display: flex;
@@ -414,4 +485,17 @@
     .md-hidden {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+    .md-only {
+        display: none;
+    }
+}
+
+/* Core Business Dropdown Active State */
+.core-business-dropdown.active {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
 }

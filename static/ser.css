@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('static/crape.jpg');
+    background-image: url('crape.jpg');
     background-repeat: repeat;
     background-size: cover;
 }
@@ -94,7 +94,7 @@ button {
 }
 
 .product-card {
-    background-color: rgb(250, 229, 178);
+    background-color: white;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);

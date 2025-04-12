@@ -11,7 +11,6 @@ const copyTextElements = document.querySelectorAll('.copy-text');
 let formData = {
   fullName: '',
   email: '',
-  phone: '',
   message: ''
 };
 let messageLength = 0;
@@ -31,44 +30,64 @@ copyTextElements.forEach(element => {
 // Functions
 function updateMessageCount() {
   messageLength = messageTextarea.value.length;
-  messageCount.textContent = `${messageLength}/500 characters`;
+  messageCount.textContent = `${messageLength}/50 characters`;
 }
 
 function handleSubmit(e) {
   e.preventDefault();
-  
+
   // Get form data
   const formElements = contactForm.elements;
   formData = {
     fullName: formElements.fullName.value,
     email: formElements.email.value,
-    phone: formElements.phone.value,
     message: formElements.message.value
   };
-  
+
   // Show loading state
   submitButton.disabled = true;
   submitButton.innerHTML = '<span><i class="fas fa-spinner fa-spin mr-2"></i>Sending...</span>';
-  
-  // Simulate form submission
-  setTimeout(() => {
+
+  // Send form data to Flask backend
+  fetch('/submit_contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    if (!response.ok) throw new Error('Network response was not ok');
+    return response.json();
+  })
+  .then(data => {
+    if (data.status === 'success') {
+      // Show success message
+      successMessage.classList.remove('hidden');
+      errorMessage.classList.add('hidden');
+
+      // Reset form
+      contactForm.reset();
+      messageLength = 0;
+      messageCount.textContent = '0/500 characters';
+
+      // Hide success message after some time
+      setTimeout(() => {
+        successMessage.classList.add('hidden');
+      }, 5000);
+    } else {
+      throw new Error(data.message || 'Something went wrong');
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    errorMessage.classList.remove('hidden');
+    successMessage.classList.add('hidden');
+  })
+  .finally(() => {
     submitButton.disabled = false;
     submitButton.textContent = 'Send Message';
-    
-    // Simulate success (in a real application, check the response)
-    successMessage.classList.remove('hidden');
-    errorMessage.classList.add('hidden');
-    
-    // Reset form
-    contactForm.reset();
-    messageLength = 0;
-    messageCount.textContent = '0/500 characters';
-    
-    // Hide success message after some time
-    setTimeout(() => {
-      successMessage.classList.add('hidden');
-    }, 5000);
-  }, 1000);
+  });
 }
 
 async function copyToClipboard(text) {

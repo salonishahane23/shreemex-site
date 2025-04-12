@@ -4,33 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shreemex - Products</title>
-    <link rel="stylesheet" href="pro.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='pro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
 <!-- Navigation Bar -->
 <nav id="main-nav" class="fixed w-full z-50 transition-all">
     <div id="nav-bg" class="backdrop-blur">
         <div class="max-w-7xl mx-auto px-4 sm-px-6 lg-px-8">
-            <div class="flex justify-between h-16 items-center">
+            <div class="flex justify-between nav-height items-center">
                 <div class="flex items-center">
                     <div class="h-12 cursor-pointer transform transition-all duration-300 hover-scale">
-                        <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                        <a href="/">
+                            <img src="https://ucarecdn.com/fba0d216-0042-4f2c-923b-1494faaee177/-/format/auto/" alt="Shreemex Logo" class="h-full w-auto object-contain">
+                        </a>
                     </div>
                 </div>
 
-                <div class="hidden md-flex items-center space-x-8">
-                    <button class="nav-link" data-item="Home">
+                <div class="hidden md-flex items-center space-x-8 desktop-menu">
+                    <a href="/" class="nav-link" data-item="Home">
                         Home
                         <span class="nav-link-underline"></span>
-                    </button>
-                    <button class="nav-link" data-item="About Us">
+                    </a>
+                    <a href="/about" class="nav-link" data-item="About Us">
                         About Us
                         <span class="nav-link-underline"></span>
-                    </button>
+                    </a>
 
                     <div class="relative group">
                         <button class="core-business-btn nav-link flex items-center gap-1" data-item="Core Business">
@@ -39,22 +40,22 @@
                         </button>
 
                         <div class="core-business-dropdown">
-                            <button class="dropdown-item" data-item="Products">Products</button>
-                            <button class="dropdown-item" data-item="Services">Services</button>
+                            <a href="/products" class="dropdown-item" data-item="Products">Products</a>
+                            <a href="/services" class="dropdown-item" data-item="Services">Services</a>
                         </div>
                     </div>
 
-                    <button class="nav-link" data-item="Team">
+                    <a href="/team" class="nav-link" data-item="Team">
                         Team
                         <span class="nav-link-underline"></span>
-                    </button>
-                    <button class="nav-link" data-item="Contact Us">
+                    </a>
+                    <a href="/contact" class="nav-link" data-item="Contact Us">
                         Contact Us
                         <span class="nav-link-underline"></span>
-                    </button>
+                    </a>
                 </div>
 
-                <button class="menu-toggle md-hidden" id="menu-toggle">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle mobile menu">
                     <span class="menu-line top-line"></span>
                     <span class="menu-line middle-line"></span>
                     <span class="menu-line bottom-line"></span>
@@ -63,16 +64,16 @@
         </div>
     </div>
 
-    <div class="mobile-menu md-hidden">
+    <div class="mobile-menu">
         <div class="px-4 py-3 space-y-3">
-            <button class="mobile-nav-item" data-item="Home">
+            <a href="/" class="mobile-nav-item" data-item="Home">
                 <i class="fas fa-home w-6"></i>
                 Home
-            </button>
-            <button class="mobile-nav-item" data-item="About Us">
+            </a>
+            <a href="/about" class="mobile-nav-item" data-item="About Us">
                 <i class="fas fa-info-circle w-6"></i>
                 About Us
-            </button>
+            </a>
 
             <div class="space-y-2">
                 <button class="mobile-dropdown-toggle">
@@ -84,28 +85,29 @@
                 </button>
 
                 <div class="mobile-dropdown">
-                    <button class="mobile-nav-item" data-item="Products">
+                    <a href="/products" class="mobile-nav-item" data-item="Products">
                         <i class="fas fa-box w-6"></i>
                         Products
-                    </button>
-                    <button class="mobile-nav-item" data-item="Services">
+                    </a>
+                    <a href="/services" class="mobile-nav-item" data-item="Services">
                         <i class="fas fa-cogs w-6"></i>
                         Services
-                    </button>
+                    </a>
                 </div>
             </div>
 
-            <button class="mobile-nav-item" data-item="Team">
+            <a href="/team" class="mobile-nav-item" data-item="Team">
                 <i class="fas fa-users w-6"></i>
                 Team
-            </button>
-            <button class="mobile-nav-item" data-item="Contact Us">
+            </a>
+            <a href="/contact" class="mobile-nav-item" data-item="Contact Us">
                 <i class="fas fa-envelope w-6"></i>
                 Contact Us
-            </button>
+            </a>
         </div>
     </div>
 </nav>
+
     <div class="min-h-screen bg-main">
         <div class="content-container">
             <div class="hero-section">
@@ -230,7 +232,7 @@
         </div>
     </div>
     
-    <script src="pro.js"></script>
-    <script src="nav.js"></script>
+    <script src="{{ url_for('static', filename='pro.js') }}"></script>
+    <script src="{{ url_for('static', filename='nav.js') }}"></script>
 </body>
 </html>
